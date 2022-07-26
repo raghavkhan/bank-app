@@ -2,33 +2,33 @@
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// BANKIST APP
+// BANK APP
 
 /////////////////////////////////////////////////
 // Data
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Raghav Khandelwal',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
 };
 
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: 'Raghav Verma',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
 };
 
 const account3 = {
-  owner: 'Steven Thomas Williams',
+  owner: 'Rakesh Kumar Chaudhary',
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
   pin: 3333,
 };
 
 const account4 = {
-  owner: 'Sarah Smith',
+  owner: 'Shweta Tiwari',
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
   pin: 4444,
@@ -86,20 +86,20 @@ moves.forEach(function(mov, i, arr) {
 
 const displayBalance = function(acc) {
 acc.balance =   acc.movements.reduce((acc,mov) => acc + mov,0)
-labelBalance.textContent = `${acc.balance} Euro`;  
+labelBalance.textContent = `${acc.balance} Rs`;  
 }
 
 
 const displaySummary = function(acc) {
 const incomes = acc.movements.filter(mov => mov > 0).reduce((acc,mov) =>acc+mov ,0);
-labelSumIn.textContent = `${incomes} Euro`;
+labelSumIn.textContent = `${incomes} Rs`;
 
 const out = acc.movements.filter(mov => mov<0).reduce((acc,mov) => acc + mov, 0);
-labelSumOut.textContent = `${Math.abs(out)} Euro`;
+labelSumOut.textContent = `${Math.abs(out)} Rs`;
 
 const interest = acc.movements.filter(mov => mov > 0).map(deposit => deposit * account1.interestRate/100 ).filter(mov => mov>1)
 .reduce((acc,mov)=> acc+mov, 0);
-labelSumInterest.textContent = `${interest} Euro`;
+labelSumInterest.textContent = `${interest} Rs`;
 }
 
 
