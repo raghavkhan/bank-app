@@ -6,6 +6,6 @@ Talking about JavaScript, concepts of DOM, various array and string methods, loo
 Good amount and quality of CSS has been implemented as well. 
 Login Details-
 userName : rk, pin : 1111
-userName : rv, pin : 2222
-userName : rkc, pin : 3333
+userName : hc, pin : 2222
+userName : rky, pin : 3333
 userName : st, pin : 4444
